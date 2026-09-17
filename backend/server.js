@@ -1,20 +1,39 @@
-const express = require("express");
 const dotenv = require("dotenv");
-const connectDB = require("./config/db");
 
 dotenv.config();
 
+const express = require("express");
+const connectDB = require("./config/db");
+const authRoutes = require("./routes/authRoutes");
+const errorHandler = require("./middleware/errorMiddleware");
+
 const app = express();
 
+
+// Middleware
 app.use(express.json());
 
+
+// Database
 connectDB();
 
+
+// Routes
+app.use("/api/auth", authRoutes);
+
+
+// Home
 app.get("/", (req, res) => {
     res.json({
-        message: "Login Signup API is running"
+        success: true,
+        message: "SecureAuth API is running"
     });
 });
+
+
+// Error Handler
+app.use(errorHandler);
+
 
 const PORT = process.env.PORT || 5000;
 
