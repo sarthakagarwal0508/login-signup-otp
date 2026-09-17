@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth - Verify Email</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="center-page">
+
+    <div class="otp-card">
+
+        <div class="otp-icon">✉</div>
+
+        <p class="eyebrow">EMAIL VERIFICATION</p>
+
+        <h1>Verify your email</h1>
+
+        <p class="otp-description">
+            We've sent a 6-digit verification code to
+            <strong id="otpEmail">your email</strong>
+        </p>
+
+        <div id="message" class="message"></div>
+
+        <form id="otpForm">
+
+            <div class="otp-inputs">
+
+                <input maxlength="1" type="text" inputmode="numeric">
+                <input maxlength="1" type="text" inputmode="numeric">
+                <input maxlength="1" type="text" inputmode="numeric">
+                <input maxlength="1" type="text" inputmode="numeric">
+                <input maxlength="1" type="text" inputmode="numeric">
+                <input maxlength="1" type="text" inputmode="numeric">
+
+            </div>
+
+            <button class="primary-btn" type="submit">
+                <span>Verify Email</span>
+                <span>→</span>
+            </button>
+
+        </form>
+
+        <div class="resend-section">
+
+            <p>
+                Didn't receive the code?
+            </p>
+
+            <button id="resendBtn" class="link-btn">
+                Resend OTP
+            </button>
+
+            <p id="timer" class="timer"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
