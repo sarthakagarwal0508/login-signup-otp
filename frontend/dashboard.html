@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <nav class="navbar">
+
+        <div class="brand">
+            <div class="logo">S</div>
+            <span>SecureAuth</span>
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+            Logout
+        </button>
+
+    </nav>
+
+
+    <main class="dashboard-content">
+
+        <div class="welcome-card">
+
+            <div>
+                <p class="eyebrow">AUTHENTICATED SESSION</p>
+                <h1>Welcome, <span id="userName">User</span> 👋</h1>
+                <p>
+                    Your account has been successfully verified.
+                </p>
+            </div>
+
+            <div class="verified-badge">
+                ✓ Verified
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-grid">
+
+            <div class="info-card">
+                <span class="card-icon">👤</span>
+                <p class="card-label">NAME</p>
+                <h3 id="profileName">-</h3>
+            </div>
+
+            <div class="info-card">
+                <span class="card-icon">✉</span>
+                <p class="card-label">EMAIL</p>
+                <h3 id="profileEmail">-</h3>
+            </div>
+
+            <div class="info-card">
+                <span class="card-icon">🔐</span>
+                <p class="card-label">ACCOUNT</p>
+                <h3>Protected</h3>
+            </div>
+
+        </div>
+
+
+        <div class="status-card">
+
+            <div>
+                <p class="eyebrow">SECURITY STATUS</p>
+                <h2>Your account is secure</h2>
+            </div>
+
+            <div class="security-items">
+                <span>✓ Email verified</span>
+                <span>✓ Password protected</span>
+                <span>✓ JWT authenticated</span>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
